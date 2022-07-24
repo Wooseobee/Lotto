@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            border: 1px solid black;
+        }
+        th {
+            border: 1px solid black;
+        }
+        th, td{
+            padding: 10px;
+            height: 20px;
+            width: 100px;
+        }
+        #num td {
+            padding: 10px;
+            height: 20px;
+            width: 0px;
+        }
+        #notice td {
+            border: 1px solid black;
+        }
+        #notice td {
+            padding: 10px;
+            height: 20px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <div>
+        <h2>이번주 로또 번호</h2>
+        <hr>
+        <h4 style="display: inline-block;">000회 <span>0000년 00월 00일</span></h4>
+        <button onclick="location.href='로또구매.html'">+</button>
+        <table id="num">
+            <tbody>
+                <tr>
+                    <td>번호 1</td>
+                    <td>번호 2</td>
+                    <td>번호 3</td>
+                    <td>번호 4</td>
+                    <td>번호 5</td>
+                    <td>번호 6</td>
+                    <td>+</td>
+                    <td>보너스 번호</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <div>
+        <span><strong>순위</strong></span> <button>누적</button> <button>최근회차</button>
+        <button style="background-color: white; border: none;" onclick="location.href='로또구매.html'">+</button>
+        <br>
+        &nbsp;
+        <table>
+            <thead>
+                <tr>
+                    <th>순위</th>
+                    <th>누적금액</th>
+                    <th>보유금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1등</td>
+                    <td>1등 누적 얼마</td>
+                    <td>1등 보유 얼마</td>
+                </tr>
+                <tr>
+                    <td>2등</td>
+                    <td>2등 누적 얼마</td>
+                    <td>2등 보유 얼마</td>
+                </tr>
+                <tr>
+                    <td>3등</td>
+                    <td>3등 누적 얼마</td>
+                    <td>3등 보유 얼마</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <a href="로또구매.html">로또 구매하러 가기</a>
+
+    <div>
+        <h2>공지사항</h2>
+        <table id="notice">
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>출시까지 D-30</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>어쩌구 저쩌구</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
