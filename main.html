@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
+    <link rel="stylesheet" type="text/css" href="nav.css">
     <style>
+        body, button, input { color: rgb(0,112,82); font-size : x-large}
         table {
             border-collapse: collapse;
             margin: auto;
@@ -35,9 +37,28 @@
     </style>
 </head>
 <body style="text-align: center;">
+    <nav id="menubar">
+        <div class="header">
+            <div style="float: right;">
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+            </div>
+        </div>
+        <div class="header2">
+            <div>
+                <a href=""><img src="logo.jpg" alt="" height="40px" width="77px" style="float: left;margin-left: 150px;"></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">로또구매</a></li>
+                    <li><a href="#">랭킹</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>이번주 로또 번호</h1>
     <div>
-        <h2>이번주 로또 번호</h2>
-        <hr>
+        <!-- <hr size="15px" style="background-color: rgb(0,112,82);"> -->
         <h4 style="display: inline-block;">000회 <span>0000년 00월 00일</span></h4>
         <button onclick="location.href='로또구매.html'">+</button>
         <table id="num">

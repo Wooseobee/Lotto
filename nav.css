@@ -1,0 +1,33 @@
+.header {
+    width: 95%;
+    height: 30px;
+}
+
+.header div a {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0px 5px;
+    font-size: medium;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 112, 82);
+}
+
+.header2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header2 div ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 20px;
+}
+
+.header2 div ul li a {
+    text-decoration: none;
+    color: rgb(0, 112, 82);
+}
