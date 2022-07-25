@@ -5,17 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="nav.css">
     <style>
+        body, button, input { color: rgb(0,112,82); font-size : x-large}
+        /* table, th, td { border: 1px solid black;} */
         table, th, td {  margin: auto;}
-        th, td { float: left; text-align: center;}
-        th { width: 100px;}
+        th, td { float: left; text-align: center; }
+        th { width: 150px;}
     </style>
 </head>
 <body style="text-align: center;">
-    <br>
-    <h1>회원가입</h>
-    <br>
-    <hr size="15px" style="background-color: rgb(0,112,82);">
+    <nav id="menubar">
+        <div class="header">
+            <div style="float: right;">
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+            </div>
+        </div>
+        <div class="header2">
+            <div>
+                <a href=""><img src="logo.jpg" alt="" height="40px" width="77px" style="float: left;margin-left: 150px;"></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">로또구매</a></li>
+                    <li><a href="#">랭킹</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>회원가입</h1>
     <table width="600" height="600" style="margin-top: 100px; font-size: x-large;">
         <form action=""></form>
         <tr>
@@ -29,11 +48,11 @@
             </td>
         </tr>
         <tr>
-            <th>비밀번호</th>
+            <th>비밀번호 : </th>
             <td><input type="password"></td>
         </tr>
         <tr>
-            <th>닉네임</th>
+            <th>닉네임 : </th>
             <td>
                 <input type="text">
             </td>
@@ -43,19 +62,27 @@
             </td>
         </tr>
 		<tr>
+            <th>이메일 : </th>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                &nbsp;
+                <button>중복확인</button>
+            </td>
+		</tr>
+		<tr>
 			<td colspan="1"></td>
 		</tr>
         <tr>
             <th></th>
-            <td> 
+            <td>
+                <input type="submit" value="회원가입" onclick="location.href='login.html'">
                 &nbsp;
-                &nbsp;
-                &nbsp;
-                <input type="submit" value="가입" onclick="location.href='main.html'">
                 &nbsp;
             </td>
             <td>
-                <input type="submit" value="취소" onclick="location.href='index.html'">
+                <input type="submit" value="돌아가기" onclick="location.href='history.back()'">
             </td>
         </tr>
     </table>
