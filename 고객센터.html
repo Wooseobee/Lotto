@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터</title>
+    <style>
+        .leftNav {
+            width: 300px;
+            float: left;
+            z-index: 1;
+        }
+        .leftNav > div{
+            height: 500px;
+        }
+        .leftNav > div > h2{
+            width: 200px;
+            text-align: center;
+        }
+        .leftNav > div > ul #inf{
+            background-color: rgb(0, 112, 82);
+        }
+        .leftNav > div > ul > li:hover{
+            background-color: rgb(0, 112, 82);
+        }
+        .leftNav li > a {
+            display: block;
+            width: 200px;
+            height: 30px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 25px;
+            border: 1px solid rgb(0, 112, 82);
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .callCenter {
+            width: 800px;
+        }
+
+        .callCenter .faq {
+            float: left;
+            display: block;
+        }
+        
+        .callCenter .faq li {
+            float: left;
+            display: block;
+            margin: 10px;
+        }
+        .callCenter .faq li a {
+            display: block;
+            width:96px; 
+            height:96px;
+            line-height: 96px;
+            text-align:center; 
+            font-size:30px; 
+            color:#fff; 
+            border-radius:100%; 
+            background:rgb(0, 112, 82);
+            text-decoration: none;
+        }
+        .callCenter .help_links {
+            float: left;
+            margin-top: 20px;
+        }
+        .callCenter .help_links ul{
+            display: block;
+            clear: both;
+        }
+
+        .callCenter .help_links ul li{
+            position: relative;
+            width: 170px;
+            height: 140px;
+            margin-left: 10px;
+            text-align: center;
+            border: 1px solid rgb(0, 112, 82);
+        }
+        .callCenter .help_links ul li p {
+            margin-top:14px;
+            line-height:18px;
+        }
+        .callCenter .help_links ul li a {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section>
+            <nav class="leftNav">
+                <div>
+                    <h2>고객센터</h2>
+                    <ul>
+                        <li id="inf"><a href=""><span>고객센터 안내</span></a></li>
+                        <li id="que"><a href=""><span>자주 묻는 질문</span></a></li>
+                        <li id="guide"><a href=""><span>이용 가이드</span></a></li>
+                        <li id="ask"><a href=""><span>1:1 문의</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="callCenter">
+                <div>
+                    <h3>고객센터 안내</h3>
+                    <div class="faq">
+                        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자주 묻는 질문</h3>
+                        <ul>
+                            <li><a href=""><span>주급</span></a></li>
+                            <li><a href=""><span>당첨</span></a></li>
+                            <li><a href=""><span>순위</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="help_links">
+                        <ul>
+                            <li>
+                                <strong>이용 가이드</strong>
+                                <p>
+                                    게임 구매에 대한
+                                    <br>
+                                    상세한 안내 입니다.
+                                    <br>
+                                    <br>
+                                </p>
+                                <a href="">가이드 보러 가기</a>
+                            </li>
+                            <li>
+                                <strong>1:1 상담</strong>
+                                <p>
+                                    궁금하신 내용을
+                                    <br>
+                                    보내주시면 성심성의껏
+                                    <br>
+                                    답변드리겠습니다.
+                                </p>
+                                <a href="">상담하러 가기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

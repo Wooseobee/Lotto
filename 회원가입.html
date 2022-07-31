@@ -11,7 +11,7 @@
         /* table, th, td { border: 1px solid black;} */
         table, th, td {  margin: auto;}
         th, td { float: left; text-align: center; }
-        th { width: 150px;}
+        th { width: 200px;}
     </style>
 </head>
 <body style="text-align: center;">
@@ -35,40 +35,46 @@
         </div>
     </nav>
     <h1>회원가입</h1>
-    <table width="600" height="600" style="margin-top: 100px; font-size: x-large;">
+    <table width="700" height="700" style="margin-top: 100px; font-size: x-large;">
         <form action=""></form>
         <tr>
             <th>아이디 : </th>
-            <td>
+            <td class="input">
                 <input type="text">
             </td>
-            <td>
+            <td class="check">
                 &nbsp;
                 <button>중복확인</button>
             </td>
         </tr>
         <tr>
             <th>비밀번호 : </th>
-            <td><input type="password"></td>
+            <td class="input"><input type="password"></td>
+        </tr>
+        <tr>
+            <th>비밀번호 확인 : </th>
+            <td class="input">
+                <input type="password">
+            </td>
+            <td class="check">
+                &nbsp;
+                <button>확인</button>
+            </td>
         </tr>
         <tr>
             <th>닉네임 : </th>
-            <td>
+            <td class="input">
                 <input type="text">
             </td>
-            <td>
+            <td class="check">
                 &nbsp;
                 <button>중복확인</button>
             </td>
         </tr>
 		<tr>
             <th>이메일 : </th>
-            <td>
+            <td class="input">
                 <input type="text">
-            </td>
-            <td>
-                &nbsp;
-                <button>중복확인</button>
             </td>
 		</tr>
 		<tr>

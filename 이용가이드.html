@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터</title>
+    <style>
+        .leftNav {
+            width: 300px;
+            float: left;
+            z-index: 1;
+        }
+        .leftNav > div{
+            height: 500px;
+        }
+        .leftNav > div > h2{
+            width: 200px;
+            text-align: center;
+        }
+        .leftNav > div > ul #guide{
+            background-color: rgb(0, 112, 82);
+        }
+        .leftNav > div > ul > li:hover{
+            background-color: rgb(0, 112, 82);
+        }
+        .leftNav li > a {
+            display: block;
+            width: 200px;
+            height: 30px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 25px;
+            border: 1px solid rgb(0, 112, 82);
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .callCenter {
+            width: 800px;
+        }
+
+        .callCenter .faq {
+            float: left;
+            display: block;
+        }
+        
+        .callCenter .faq li {
+            float: left;
+            display: block;
+            margin: 10px;
+        }
+        .callCenter .faq li a {
+            display: block;
+            width:96px; 
+            height:96px;
+            line-height: 96px;
+            text-align:center; 
+            font-size:30px; 
+            color:#fff; 
+            border-radius:100%; 
+            background:rgb(0, 112, 82);
+            text-decoration: none;
+        }
+        .callCenter .help_links {
+            float: left;
+            margin-top: 20px;
+        }
+        .callCenter .help_links ul{
+            display: block;
+            clear: both;
+        }
+
+        .callCenter .help_links ul li{
+            position: relative;
+            width: 170px;
+            height: 140px;
+            margin-left: 10px;
+            text-align: center;
+            border: 1px solid rgb(0, 112, 82);
+        }
+        .callCenter .help_links ul li p {
+            margin-top:14px;
+            line-height:18px;
+        }
+        .callCenter .help_links ul li a {
+            color: blue;
+        }
+
+        .guide {
+            width: 1500px;
+        }
+        .guides {
+            width: 920px;
+            height: 1000px;
+            float: left;
+        }
+        .guides strong {
+            color: rgb(0, 112, 82);
+            font-size: X-large;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section>
+            <nav class="leftNav">
+                <div>
+                    <h2>고객센터</h2>
+                    <ul>
+                        <li id="inf"><a href=""><span>고객센터 안내</span></a></li>
+                        <li id="que"><a href=""><span>자주 묻는 질문</span></a></li>
+                        <li id="guide"><a href=""><span>이용 가이드</span></a></li>
+                        <li id="ask"><a href=""><span>1:1 문의</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="guide">
+                <div>
+                    <h3>이용 가이드</h3>
+                    <div class="guides">
+                        <ul>
+                            <li>
+                                <h3>소개</h3>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            매주 동행복권 로또6/45의 결과에 따라 당첨액이 결정됩니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>특징</h3>
+                                <ul>
+                                    <li>
+                                        <p><strong>복권 게임입니다.</strong></p>
+                                        <p>우리 복권은 현금이 아닌 매주 주어지는 주급으로 로또를 구매할 수 있습니다.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>자동, 수동으로 선택하여 복권을 구입할 수 있습니다.</strong></p>
+                                        <p>자동선택을 선택하거나 45개의 번호 중 6개의 번호를 임의로 부여받는 방법 중에서 원하는대로 구입할 수 있습니다.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>1등 당첨자가 없는 경우 당첨금은 다음 회차로 이월됩니다.</strong></p>
+                                        <p>1등 당첨자가 없는 경우에 해당 당첨금은 다음 회차 1등 당첨금으로 이월되며, 연속 이월은 2회로 제한됩니다.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>판매량에 따라 복권기금과 1등 당첨금액이 결정됩니다.</strong></p>
+                                        <p>로또 6/45는 한 주의 판매량에 따라 복권기금 누적액과 1등 당첨금액이 달라지게 됩니다.
+                                            판매량에는 제한이 없으며, 추첨 당일에도 판매 마감 시까지 구매할 수 있습니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>구입 안내</h3>
+                                <ul>
+                                    <li>
+                                        <p><strong>복권 게임입니다.</strong></p>
+                                        <p>우리 복권은 현금이 아닌 매주 주어지는 주급으로 로또를 구매할 수 있습니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>유의 사항</h3>
+                                <ul>
+                                    <li>
+                                        <p><strong>복권 게임입니다.</strong></p>
+                                        <p>우리 복권은 현금이 아닌 매주 주어지는 주급으로 로또를 구매할 수 있습니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
