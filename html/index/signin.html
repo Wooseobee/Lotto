@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/footer.css">
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
-        body, button, input { color: rgb(0,112,82); font-size : x-large}
-        table, th, td {  margin: auto;}
-        th, td { float: left; text-align: center; }
-        th { width: 200px; margin-bottom: 45px;}
-        span {color: red; font-size: medium; visibility: hidden; display: block;}
+        button, input { color: rgb(0,112,82); font-size : x-large}
+        .signup table, .signup th, .signup td {  margin: auto;}
+        .signup th, .signup td { float: left; text-align: center; }
+        .signup th { width: 200px; margin-bottom: 45px;}
+        .signup span {color: red; font-size: medium; visibility: hidden; display: block;}
         body {
             width: 100%;
             min-width: 1024px;
@@ -23,6 +24,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            color: rgb(0,112,82);
+            font-size : x-large
         }
         .signup {
             width: 700px;
@@ -30,7 +33,7 @@
             text-align: center;
             overflow: hidden;
         }
-        table{
+        .signup table{
             display: inline-block;
         }
     </style>
@@ -96,6 +99,42 @@
             </table>
         </div>
     </div>
-    <script type="text/javascript" src="../js/checkPassword.js"></script>
+    <footer>
+        <div>
+            <h1>Lotto Simulator</h1>
+        </div>
+        <div>
+            <p>
+                공동 대표 : 송호준 , 신우섭<br>
+                주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                copyright &copy; All Right Reserved
+            </p>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>제작 : </th>
+                        <th>송호준</th>
+                        <td>|</td>
+                        <th>신우섭</th>
+                    </tr>
+                    <tr>
+                        <td>이메일 : </td>
+                        <td>hojunking96@gmail.com</td>
+                        <td>|</td>
+                        <td>dntjq807@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>깃허브 : </td>
+                        <td><a href="https://github.com/hojunking96">Github</a></td>
+                        <td>|</td>
+                        <td><a href="https://github.com/Wooseobee">Github</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../../js/checkPassword.js"></script>
 </body>
 </html>
