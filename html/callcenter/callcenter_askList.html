@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../footer.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../js/showMetheMoney.js"></script>
+    <style>
+        .section {
+            width: 1024px;
+            margin-top: 50px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        p {
+            display: inline-block;
+        }
+        .contents table {
+            width: 100%;
+            border-color: grey;
+            border-collapse: collapse;
+        }
+        .contents table, .contents th, .contents td {
+            padding: 0;
+            margin: 0;
+        }
+        .contents th {
+            font-size: large;
+            border: 1px solid rgb(0, 112, 82);
+            border-top: 2px solid rgb(0, 112, 82);
+            height: 50px;
+        }
+        .contents td {
+            height: 300px;
+            border: 1px solid rgb(0, 112, 82);
+            text-align: center;
+        }
+        .tb1 {
+            border: 1px solid rgb(0, 112, 82);
+            table-layout: fixed;
+        }
+        .register > div > a {
+            color: white;
+            margin-top: 10px;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: rgb(0, 112, 82);
+            font-size: x-large;
+            float: right;
+        }
+        #ask {
+            background-color: rgb(0, 112, 82);
+        }
+    </style>
+</head>
+<body>
+    <nav id="menubar">
+        <div class="header">
+            <div class="logo">
+                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
+                        style="float: left;margin-left: 100px;"></a>
+            </div>
+            <div class="inf">
+                <a href="#" id="name">로또짱님</a>
+                <a href="#" id="money">보유금액 0원</a>
+                <a href="#" onclick="showMetheMoney()">주급받기</a>
+                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
+            </div>
+        </div>
+    </nav>
+    <div class="line1"></div>
+    <div id="dropboxdiv">
+        <ul id="dropbox">
+            <li><a href="#">로또구매하기</a>
+                <ul>
+                    <li><a href="#">자동구매</a></li>
+                    <li><a href="#">수동구매</a></li>
+                </ul>
+            </li>
+            <li><a href="#">순위</a>
+                <ul>
+                    <li><a href="#">최근순위</a></li>
+                    <li><a href="#">누적순위</a></li>
+                </ul>
+            </li>
+            <li><a href="#">당첨번호</a>
+                <ul>
+                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호당첨확인</a></li>
+                    <li><a href="당첨내역.html">당첨내역</a></li>
+                </ul>
+            </li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
+    </div>
+    <div class="line2"></div>
+    <div>
+        <section class="section">
+            <nav class="leftNav">
+                <div>
+                    <h2>고객센터</h2>
+                    <ul>
+                        <li id="inf"><a href=""><span>고객센터 안내</span></a></li>
+                        <li id="que"><a href=""><span>자주 묻는 질문</span></a></li>
+                        <li id="guide"><a href=""><span>이용 가이드</span></a></li>
+                        <li id="ask"><a href=""><span>1:1 문의</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <h2>1:1 상담</h2>
+                <div class="contents">
+                    <div>
+                        <form action="">
+                            <table class="tb1">
+                                <thead>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">분류</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">처리현황</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                       <td colspan="5" class="nodata">등록된 1:1 상담내용이 없습니다.</td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="register">
+                                <div>
+                                    <a href="">상담등록</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div>
+            <h1>Lotto Simulator</h1>
+        </div>
+        <div>
+            <p>
+                공동 대표 : 송호준 , 신우섭<br>
+                주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                copyright &copy; All Right Reserved
+            </p>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>제작 : </th>
+                        <th>송호준</th>
+                        <td>|</td>
+                        <th>신우섭</th>
+                    </tr>
+                    <tr>
+                        <td>이메일 : </td>
+                        <td>hojunking96@gmail.com</td>
+                        <td>|</td>
+                        <td>dntjq807@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>깃허브 : </td>
+                        <td><a href="https://github.com/hojunking96">Github</a></td>
+                        <td>|</td>
+                        <td><a href="https://github.com/Wooseobee">Github</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../../js/dropbox.js"></script>
+</body>
+</html>

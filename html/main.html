@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/leftnav.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../footer.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/showMetheMoney.js"></script>
+    <style>
+        #body-wrapper, button, input {
+            color: rgb(0, 112, 82);
+            font-size: x-large;
+        }
+
+        .section2 table, #notice table {
+            border-collapse: collapse;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .section2 th, .section2 td {
+            padding: 10px;
+            height: 20px;
+            width: 100px;
+        }
+
+        #num td {
+            padding: 10px;
+            height: 20px;
+            width: 0px;
+        }
+        #body-content {
+            display: flex;
+            width: 1600px;
+            margin: auto;
+        }
+
+        #notice {
+            width: 1500px;
+            display: block;
+            text-align: center;
+            margin: auto;
+        }
+
+        #notice th {
+            border: 1px solid black;
+            width: 200px;
+        }
+
+        #notice td {
+            padding: 10px;
+            height: 20px;
+            width: 700px;
+        }
+
+        section {
+            margin-top: 50px;
+            height: 600px;
+            width: 600px;
+            display: inline-block;
+            flex: 1;
+        }
+        .section1 {
+            text-align: center;
+        }
+        .section2 th {
+            border: 1px solid black;
+        }
+        .nums {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid rgb(0, 112, 82);
+            border-collapse:collapse;
+        }
+        .numWin strong {
+            display: block;
+            text-align: right;
+            margin-right: 180px;
+        }
+        .numBonus strong{
+            display: block;
+            text-align: center;
+        }
+
+        .ball {
+            display: inline-block;
+            border-radius: 100%;
+            text-align: center;
+            vertical-align: middle;
+            background-color: rgb(0, 112, 82);
+            font-weight: 500;
+            width: 60px;
+            height: 60px;
+            line-height: 56px;
+            font-size: 30px;
+            color: white;
+            margin: 0 3px;
+        }
+        .buy {
+            border-bottom: 3px solid rgb(0, 112, 82);
+            border-left: 3px solid rgb(0, 112, 82);
+            border-right: 3px solid rgb(0, 112, 82);
+            border-collapse: collapse;
+        }
+
+        .buy > a {
+            border-bottom: 3px solid rgb(0, 112, 82);
+        }
+
+        .buyTable {
+            text-align: center;
+        }
+        .buyTable th {
+            padding: 0;
+            height: 10px;
+            border-bottom: 3px solid rgb(0, 112, 82);
+            border-collapse: collapse;
+        }
+        .buyTable td {
+            padding: 0;
+            height: 10px;
+            width: 700px;
+        }
+        #body-wrapper {
+            height: 900px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <nav id="menubar">
+        <div class="header">
+            <div class="logo">
+                <a href="main.html"><img src="../logo.jpg" alt="" height="70px" width="134.75px"
+                        style="float: left;margin-left: 100px;"></a>
+            </div>
+            <div class="inf">
+                <a href="#" id="name">로또짱님</a>
+                <a href="#" id="money">보유금액 0원</a>
+                <a href="#" onclick="showMetheMoney()">주급받기</a>
+                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#">마이페이지</a>
+                <a href="callcenter/callcenter.html">고객센터</a>
+            </div>
+        </div>
+    </nav>
+    <div class="line1"></div>
+    <div id="dropboxdiv">
+        <ul id="dropbox">
+            <li><a href="buy/buy_manual.html" onclick="window.open(this.href, '_blank','width=600px, height=600px'); return false;">로또구매하기</a>
+                <ul>
+                    <li><a href="buy/buy_auto.html" onclick="window.open(this.href, '_blank','width=600px, height=600px'); return false;">자동구매</a></li>
+                    <li><a href="buy/buy_manual.html" onclick="window.open(this.href, '_blank','width=600px, height=600px'); return false;">수동구매</a></li>
+                </ul>
+            </li>
+            <li><a href="rank/rank_sum.html">순위</a>
+                <ul>
+                    <li><a href="rank/rank_recent.html">최근순위</a></li>
+                    <li><a href="rank/rank_sum.html">누적순위</a></li>
+                </ul>
+            </li>
+            <li><a href="#">당첨번호</a>
+                <ul>
+                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호당첨확인</a></li>
+                    <li><a href="당첨내역.html">당첨내역</a></li>
+                </ul>
+            </li>
+            <li><a href="notice/notice.html">공지사항</a></li>
+        </ul>
+    </div>
+    <div class="line2"></div>
+    <div id="body-wrapper">
+        <div id="body-content">
+            <section class="section1">
+                <h1>이번주 로또 번호</h1>
+                <div>
+                    <h4 style="display: inline-block;">000회 <span>0000년 00월 00일</span></h4>
+                    <button style="background-color: white; border: none;"onclick="location.href='로또번호.html'">+</button>
+                    <div class="nums">
+                        <div class="numWin">
+                            <p>
+                                <span class="ball">5</span>
+                                <span class="ball">12</span>
+                                <span class="ball">13</span>
+                                <span class="ball">31</span>
+                                <span class="ball">32</span>
+                                <span class="ball">41</span>
+                            </p>
+                            <strong>당첨번호</strong>
+                        </div>
+                        <div class="numBonus">
+                            <p>&nbsp;&nbsp;
+                                +&nbsp;
+                                <span class="ball">5</span>
+                            </p>
+                            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보너스</strong>
+                        </div>
+                    </div>
+                    <div class="buy">
+                        <table class="buyTable">
+                            <thead>
+                                <th colspan="2"><a href="buy/buy_manual.html" onclick="window.open(this.href, '_blank','width=600px, height=600px'); return false;">로또 구매하러가기</a></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="border-right: 3px solid rgb(0, 112, 82);"><a href="buy/buy_manual.html" onclick="window.open(this.href, '_blank','width=600px, height=600px'); return false;">수동구매</a></td>
+                                    <td><a href="buy/buy_auto.html" onclick="window.open(this.href, '_blank','width=600px, height=600px'); return false;">자동구매</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <div>
+                    <h1 style="display: inline-block;">누적순위</h1>
+                    <button style="background-color: white; border: none;" onclick="location.href='rank/rank_sum.html'">+</button>
+                    &nbsp;
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>순위</th>
+                                <th>누적금액</th>
+                                <th>보유금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1등</td>
+                                <td>1등 누적 얼마</td>
+                                <td>1등 보유 얼마</td>
+                            </tr>
+                            <tr>
+                                <td>2등</td>
+                                <td>2등 누적 얼마</td>
+                                <td>2등 보유 얼마</td>
+                            </tr>
+                            <tr>
+                                <td>3등</td>
+                                <td>3등 누적 얼마</td>
+                                <td>3등 보유 얼마</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="section2">
+                <div>
+                    <h1 style="display: inline-block;">누적순위</h1>
+                    <button style="background-color: white; border: none;" onclick="location.href='rank/rank_sum.html'">+</button>
+                    &nbsp;
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>순위</th>
+                                <th>누적금액</th>
+                                <th>보유금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1등</td>
+                                <td>5,000,000원</td>
+                                <td>1등 보유 얼마</td>
+                            </tr>
+                            <tr>
+                                <td>2등</td>
+                                <td>2등 누적 얼마</td>
+                                <td>2등 보유 얼마</td>
+                            </tr>
+                            <tr>
+                                <td>3등</td>
+                                <td>3등 누적 얼마</td>
+                                <td>3등 보유 얼마</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div id="notice">
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>공지사항</th>
+                            <td>출시까지 D-30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <h1>Lotto Simulator</h1>
+        </div>
+        <div>
+            <p>
+                공동 대표 : 송호준 , 신우섭<br>
+                주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                copyright &copy; All Right Reserved
+            </p>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>제작 : </th>
+                        <th>송호준</th>
+                        <td>|</td>
+                        <th>신우섭</th>
+                    </tr>
+                    <tr>
+                        <td>이메일 : </td>
+                        <td>hojunking96@gmail.com</td>
+                        <td>|</td>
+                        <td>dntjq807@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>깃허브 : </td>
+                        <td><a href="https://github.com/hojunking96">Github</a></td>
+                        <td>|</td>
+                        <td><a href="https://github.com/Wooseobee">Github</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/dropbox.js"></script>
+</body>
+
+</html>
