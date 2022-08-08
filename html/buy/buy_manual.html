@@ -9,179 +9,315 @@
     <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../../css/header.css">
     <link rel="stylesheet" type="text/css" href="../../css/footer.css">
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../../js/checknum.js"></script>
     <script type="text/javascript" src="../../js/showMetheMoney.js"></script>
     <style>
-        #checked {
+        .contents {
+            display: flex;
+            height: 530px;
+        }
+
+        .contents div {
+            border: 3px solid rgb(0, 112, 82);
+            border-collapse: collapse;
+        }
+
+        .contents .div1 {
+            margin-top: 10px;
+            height: 370px;
+            width: 560px;
+            text-align: center;
+        }
+        .contents .div2 {
+            margin-top: 10px;
+            height: 370px;
+            width: 180px;
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 300px;
-            border: 3px solid rgb(0, 112, 82);
         }
-        #checked > div {
-            margin-top: 10px;
-            width: 500px;
-            text-align: center;
-            border: 3px solid rgb(0, 112, 82);
-        }
-        #checked label{
+        .contents label{
             border: 3px solid rgb(0, 112, 82);
             display: inline-block;
             width: 50px;
+            height: 50px;
+            font-size: large;
+            margin: auto;
+            padding: 0;
+            margin-bottom: 10px;
         }
-        #checked input {
+        .contents > input {
             display: inline-block;
+        }
+        label:active {
+            box-shadow: 1px 1px 0 rgb(0, 112, 82);
+            position: relative;
+            top: 2px;
+        }
+        #manual > a {
+            background-color: rgb(0, 112, 82);
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div id="checked">
-        <div>
-            <br>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="1" style="display: none;">1
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="2" style="display: none;">2
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="3" style="display: none;">3
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="4" style="display: none;">4
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="5" style="display: none;">5
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="6" style="display: none;">6
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="7" style="display: none;">7
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="8">8
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="9">9
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="10">10
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="11">11
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="12">12
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="13">13
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="14">14
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="15">15
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="16">16
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="17">17
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="18">18
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="19">19
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="20">20
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="21">21
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="22">22
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="23">23
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="24">24
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="25">25
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="26">26
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="27">27
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="28">28
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="29">29
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="30">30
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="31">31
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="32">32
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="33">33
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="34">34
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="35">35
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="36">36
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="37">37
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="38">38
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="39">39
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="40">40
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="41">41
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="42">42
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="43">43
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="44">44
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="45">45
-            </label>
-            <br>
-            <div id="buttons">
-                <button onclick="resetAll()">초기화</button>
-                <button>구매하기</button>
+    <nav id="menubar">
+        <div class="header">
+            <div class="logo">
+                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
+                        style="float: left;margin-left: 100px;"></a>
+            </div>
+            <div class="inf">
+                <a href="#" id="name">로또짱님</a>
+                <a href="#" id="money">보유금액 0원</a>
+                <a href="#" onclick="showMetheMoney()">주급받기</a>
+                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
             </div>
         </div>
+    </nav>
+    <div class="line1"></div>
+    <div id="dropboxdiv">
+        <ul id="dropbox">
+            <li><a href="#">로또구매하기</a>
+                <ul>
+                    <li><a href="#">자동구매</a></li>
+                    <li><a href="#">수동구매</a></li>
+                </ul>
+            </li>
+            <li><a href="#">순위</a>
+                <ul>
+                    <li><a href="#">이번주 순위</a></li>
+                    <li><a href="#">누적순위</a></li>
+                </ul>
+            </li>
+            <li><a href="#">당첨결과</a>
+                <ul>
+                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호 당첨확인</a></li>
+                    <li><a href="당첨내역.html">내 당첨내역</a></li>
+                </ul>
+            </li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
     </div>
+    <div class="line2"></div>
+    <div>
+        <section class="section">
+            <nav class="leftNav">
+                <div>
+                    <h2>고객센터</h2>
+                    <ul>
+                        <li id="auto"><a href=""><span>자동구매</span></a></li>
+                        <li id="manual"><a href=""><span>수동구매</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h2>수동구매</h2>
+            <div class="content">
+                <h4 style="color: red;">*6개의 숫자를 선택해주세요</h4>
+                <div class="contents" id="checked">
+                    <div class="div1">
+                        <br>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="1" style="display: none;">1
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="2" style="display: none;">2
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="3" style="display: none;">3
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="4" style="display: none;">4
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="5" style="display: none;">5
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="6" style="display: none;">6
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="7" style="display: none;">7
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="8" style="display: none;">8
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="9" style="display: none;">9
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="10" style="display: none;">10
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="11" style="display: none;">11
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="12" style="display: none;">12
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="13" style="display: none;">13
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="14" style="display: none;">14
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="15" style="display: none;">15
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="16" style="display: none;">16
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="17" style="display: none;">17
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="18" style="display: none;">18
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="19" style="display: none;">19
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="20" style="display: none;">20
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="21" style="display: none;">21
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="22" style="display: none;">22
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="23" style="display: none;">23
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="24" style="display: none;">24
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="25" style="display: none;">25
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="26" style="display: none;">26
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="27" style="display: none;">27
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="28" style="display: none;">28
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="29" style="display: none;">29
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="30" style="display: none;">30
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="31" style="display: none;">31
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="32" style="display: none;">32
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="33" style="display: none;">33
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="34" style="display: none;">34
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="35" style="display: none;">35
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="36" style="display: none;">36
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="37" style="display: none;">37
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="38" style="display: none;">38
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="39" style="display: none;">39
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="40" style="display: none;">40
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="41" style="display: none;">41
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="42" style="display: none;">42
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="43" style="display: none;">43
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="44" style="display: none;">44
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checknum" onchange="checknum($(this))" value="45" style="display: none;">45
+                        </label>
+                        <br>
+                    </div>
+                    
+                    <div class="div2" id="buttons">
+                        <form>
+                            적용수량
+                            <select name="language">
+                                <option >1</option>
+                                <option >5</option>
+                                <option >10</option>
+                            </select>
+                            <input type="button" value="확인">
+                            <br>
+                            <br>
+                            <strong>결제금액 :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>원</span>
+                            <br>
+                            <br>
+                            <button onclick="resetAll()">초기화</button>
+                            <button>구매하기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div>
+            <h1>Lotto Simulator</h1>
+        </div>
+        <div>
+            <p>
+                공동 대표 : 송호준 , 신우섭<br>
+                주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                copyright &copy; All Right Reserved
+            </p>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>제작 : </th>
+                        <th>송호준</th>
+                        <td>|</td>
+                        <th>신우섭</th>
+                    </tr>
+                    <tr>
+                        <td>이메일 : </td>
+                        <td>hojunking96@gmail.com</td>
+                        <td>|</td>
+                        <td>dntjq807@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>깃허브 : </td>
+                        <td><a href="https://github.com/hojunking96">Github</a></td>
+                        <td>|</td>
+                        <td><a href="https://github.com/Wooseobee">Github</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </footer>
     <script type="text/javascript" src="../../js/dropbox.js"></script>
 </body>
 </html>
