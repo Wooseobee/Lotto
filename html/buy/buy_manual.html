@@ -111,8 +111,8 @@
                 <div>
                     <h2>고객센터</h2>
                     <ul>
-                        <li id="auto"><a href=""><span>자동구매</span></a></li>
-                        <li id="manual"><a href=""><span>수동구매</span></a></li>
+                        <li id="auto"><a href="buy_auto.html"><span>자동구매</span></a></li>
+                        <li id="manual"><a href="buy_manual.html"><span>수동구매</span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -263,15 +263,17 @@
                     <div class="div2" id="buttons">
                         <form>
                             적용수량
-                            <select name="language">
-                                <option >1</option>
-                                <option >5</option>
-                                <option >10</option>
+                            <select id="count">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
                             </select>
-                            <input type="button" value="확인">
+                            <input type="button" value="확인" onclick="checkTotalMoney()">
                             <br>
                             <br>
-                            <strong>결제금액 :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>원</span>
+                            <strong>결제금액 :</strong>&nbsp;<span id="totalMoney">원</span>
                             <br>
                             <br>
                             <button onclick="resetAll()">초기화</button>
