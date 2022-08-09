@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+    <script type="text/javascript" src="showMetheMoney.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .leftNav>div>ul #navtitle2 {
+            background-color: rgb(0, 112, 82);
+        }
+
+        .leftNav>div>ul #navtitle2 a {
+            color: white;
+        }
+
+        .contents table {
+            margin: auto;
+            width: 800px;
+            height: 400px;
+            border-collapse: collapse;
+        }
+
+        .contents th,
+        .contents td {
+            border: 1px solid rgb(170, 170, 170);
+        }
+
+        .contents th {
+            border-top: 3px solid rgb(0, 112, 82);
+            background-color: rgb(240, 240, 240);
+        }
+
+        #searchbtndiv {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="menubar">
+        <div class="header">
+            <div class="logo">
+                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
+                        style="float: left;margin-left: 100px;"></a>
+            </div>
+            <div class="inf">
+                <a href="#" id="name">로또짱님</a>
+                <a href="#" id="money">보유금액 0원</a>
+                <a href="#" onclick="showMetheMoney()">주급받기</a>
+                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
+            </div>
+        </div>
+    </nav>
+    <div class="line1"></div>
+    <div id="dropboxdiv">
+        <ul id="dropbox">
+            <li><a href="#">로또구매하기</a>
+                <ul>
+                    <li><a href="#">자동구매</a></li>
+                    <li><a href="#">수동구매</a></li>
+                </ul>
+            </li>
+            <li><a href="#">순위</a>
+                <ul>
+                    <li><a href="#">최근순위</a></li>
+                    <li><a href="#">누적순위</a></li>
+                </ul>
+            </li>
+            <li><a href="#">당첨번호</a>
+                <ul>
+                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호당첨확인</a></li>
+                    <li><a href="당첨내역.html">당첨내역</a></li>
+                </ul>
+            </li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
+    </div>
+    <div class="line2"></div>
+    <div class="container">
+        <section class="section">
+            <nav class="leftNav">
+                <div>
+                    <h2>마이페이지</h2>
+                    <ul>
+                        <li id="navtitle1"><a href="mypage.html"><span>마이페이지</span></a></li>
+                        <li id="navtitle2"><a href="mypage_receipt.html"><span>최근 구입내역</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <h2>최근 구입내역</h2>
+                <div class="contents">
+                    <div id="searchbtndiv">
+                        조회기간 :
+                        <input type="button" value="당일">
+                        <input type="button" value="1주일">
+                        <input type="button" value="1개월">
+                    </div>
+                    <br>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구입일자</th>
+                                    <th>회차</th>
+                                    <th>구입매수(원)</th>
+                                    <th>당첨금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2022-07-25</td>
+                                    <td>383</td>
+                                    <td>5 (5,000원)</td>
+                                    <td>0 원</td>
+                                </tr>
+                                <tr>
+                                    <td>2022-07-25</td>
+                                    <td>383
+                                    </td>
+                                    <td>5 (5,000원)
+                                    </td>
+                                    <td>0 원
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022-07-25
+                                    </td>
+                                    <td>383
+                                    </td>
+                                    <td>5 (5,000원)
+                                    </td>
+                                    <td>0 원
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022-07-25
+                                    </td>
+                                    <td>383
+                                    </td>
+                                    <td>5 (5,000원)
+                                    </td>
+                                    <td>0 원
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2022-07-25
+                                    </td>
+                                    <td>383
+                                    </td>
+                                    <td>5 (5,000원)
+                                    </td>
+                                    <td>0 원
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        <footer>
+            <div>
+                <h1>Lotto Simulator</h1>
+            </div>
+            <div>
+                <p>
+                    공동 대표 : 송호준 , 신우섭<br>
+                    주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                    copyright &copy; All Right Reserved
+                </p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제작 : </th>
+                            <th>송호준</th>
+                            <td>|</td>
+                            <th>신우섭</th>
+                        </tr>
+                        <tr>
+                            <td>이메일 : </td>
+                            <td>hojunking96@gmail.com</td>
+                            <td>|</td>
+                            <td>dntjq807@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>깃허브 : </td>
+                            <td><a href="https://github.com/hojunking96">Github</a></td>
+                            <td>|</td>
+                            <td><a href="https://github.com/Wooseobee">Github</a></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </footer>
+</body>
+<script>
+    $('#dropboxdiv li').hover(
+        function () {
+            $('ul', this).stop().slideDown(200);
+        },
+        function () {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+</script>
+
+</html>
+
+<!DOCTYPE html>
+<html>
