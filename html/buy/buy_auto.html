@@ -4,35 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수동구매</title>
+    <title>자동구매</title>
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../../css/header.css">
     <link rel="stylesheet" type="text/css" href="../../css/footer.css">
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../../js/checknum.js"></script>
     <script type="text/javascript" src="../../js/showMetheMoney.js"></script>
     <style>
-        #checked {
+        .contents {
+            display: flex;
+            height: 530px;
+        }
+
+        .contents > div {
+            border: 3px solid rgb(0, 112, 82);
+            border-collapse: collapse;
+        }
+
+        .contents .div1 {
+            margin-top: 10px;
+            height: 370px;
+            width: 560px;
+            text-align: center;
+        }
+        .contents .div2 {
+            margin-top: 10px;
+            height: 370px;
+            width: 180px;
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 300px;
-            border: 3px solid rgb(0, 112, 82);
         }
-        #checked > div {
-            margin-top: 10px;
-            width: 500px;
+        #auto > a {
+            background-color: rgb(0, 112, 82);
+            color: white;
+        }
+        .ball {
+            display: inline-block;
+            border-radius: 100%;
             text-align: center;
-            border: 3px solid rgb(0, 112, 82);
+            vertical-align: middle;
+            background-color: rgb(0, 112, 82);
+            font-weight: 500;
+            width: 41px;
+            height: 41px;
+            line-height: 50px;
+            font-size: 30px;
+            color: white;
+            margin: 0 3px;
         }
-        #checked label{
-            border: 3px solid rgb(0, 112, 82);
-            display: inline-block;
-            width: 50px;
+        .nums {
+            border-bottom: 1px solid rgb(0, 112, 82);
         }
-        #checked input {
-            display: inline-block;
+        .isSelected {
+            font-size: large;
+            color: red;
+            margin-right: 40px;
         }
     </style>
 </head>
@@ -49,7 +79,7 @@
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
                 <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                 <a href="#">마이페이지</a>
-                <a href="callcenter.html">고객센터</a>
+                <a href="#">고객센터</a>
             </div>
         </div>
     </nav>
@@ -64,166 +94,149 @@
             </li>
             <li><a href="#">순위</a>
                 <ul>
-                    <li><a href="#">최근순위</a></li>
+                    <li><a href="#">이번주 순위</a></li>
                     <li><a href="#">누적순위</a></li>
                 </ul>
             </li>
-            <li><a href="#">당첨번호</a>
+            <li><a href="#">당첨결과</a>
                 <ul>
                     <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
-                    <li><a href="지난번호당첨확인.html">지난번호당첨확인</a></li>
-                    <li><a href="당첨내역.html">당첨내역</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호 당첨확인</a></li>
+                    <li><a href="당첨내역.html">내 당첨내역</a></li>
                 </ul>
             </li>
             <li><a href="#">공지사항</a></li>
         </ul>
     </div>
     <div class="line2"></div>
-    <div id="checked">
-        <div>
-            <br>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="1">1
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="2">2
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="3">3
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="4">4
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="5">5
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="6">6
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="7">7
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="8">8
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="9">9
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="10">10
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="11">11
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="12">12
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="13">13
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="14">14
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="15">15
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="16">16
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="17">17
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="18">18
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="19">19
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="20">20
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="21">21
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="22">22
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="23">23
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="24">24
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="25">25
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="26">26
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="27">27
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="28">28
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="29">29
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="30">30
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="31">31
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="32">32
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="33">33
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="34">34
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="35">35
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="36">36
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="37">37
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="38">38
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="39">39
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="40">40
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="41">41
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="42">42
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="43">43
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="44">44
-            </label>
-            <label>
-                <input type="checkbox" name="checknum" onchange="checknum($(this))" value="45">45
-            </label>
-            <br>
-            <div id="buttons">
-                <button onclick="resetAll()">초기화</button>
-                <button>구매하기</button>
+    <div>
+        <section class="section">
+            <nav class="leftNav">
+                <div>
+                    <h2>고객센터</h2>
+                    <ul>
+                        <li id="auto"><a href="buy_auto.html"><span>자동구매</span></a></li>
+                        <li id="manual"><a href="buy_manual.html"><span>수동구매</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h2>자동구매</h2>
+            <div class="content">
+                <h4 style="color: red;">*구매할 수량을 선택해주세요</h4>
+                <div class="contents" id="checked">
+                    <div class="div1">
+                        <div class="nums">
+                            <p>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                            </p>
+                        </div>
+                        <div class="nums">
+                            <p>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                            </p>
+                        </div>
+                        <div class="nums">
+                            <p>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                            </p>
+                        </div>
+                        <div class="nums">
+                            <p>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                            </p>
+                        </div>
+                        <div class="nums">
+                            <p>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                                <span class="ball">*</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="div2" id="buttons">
+                        <form>
+                            적용수량
+                            <select id="count">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <input type="button" value="확인" onclick="checkTotalMoney()">
+                            <br>
+                            <br>
+                            <strong>결제금액 :</strong>&nbsp;<span id="totalMoney">원</span>
+                            <br>
+                            <br>
+                            <button onclick="resetAutoNums()">초기화</button>
+                            <button>구매하기</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
+    <footer>
+        <div>
+            <h1>Lotto Simulator</h1>
+        </div>
+        <div>
+            <p>
+                공동 대표 : 송호준 , 신우섭<br>
+                주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                copyright &copy; All Right Reserved
+            </p>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>제작 : </th>
+                        <th>송호준</th>
+                        <td>|</td>
+                        <th>신우섭</th>
+                    </tr>
+                    <tr>
+                        <td>이메일 : </td>
+                        <td>hojunking96@gmail.com</td>
+                        <td>|</td>
+                        <td>dntjq807@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>깃허브 : </td>
+                        <td><a href="https://github.com/hojunking96">Github</a></td>
+                        <td>|</td>
+                        <td><a href="https://github.com/Wooseobee">Github</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </footer>
     <script type="text/javascript" src="../../js/dropbox.js"></script>
 </body>
 </html>
