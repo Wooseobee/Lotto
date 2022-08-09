@@ -18,4 +18,35 @@ function resetAll(){
     var checked = $("#checked").find("input[type='checkbox']:checked");
     checked.prop("checked", false);
     checked.css("background-color", "white");
+    document.getElementById("totalMoney").innerHTML = "원";
+}
+
+function checkTotalMoney(){
+    var sel = document.getElementById("count");
+    var cnt = sel.options[sel.selectedIndex].value;
+    var money = document.getElementById("totalMoney");
+
+    switch (cnt) {
+        case '1':
+            money.innerHTML = "1000원";
+            break;
+        case '2':
+            money.innerHTML = "2000원";
+            break;
+        case '3':
+            money.innerHTML = "3000원";
+            break;
+        case '4':
+            money.innerHTML = "4000원";
+            break;
+        case '5':
+            money.innerHTML = "5000원";
+            break;
+        default:
+            break;
+    }
+}
+
+function resetAutoNums(){
+    document.getElementById("totalMoney").innerHTML = "원";
 }
