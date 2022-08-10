@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="leftnav.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <title>Lotto Simulator</title>
+    <script type="text/javascript" src="showMetheMoney.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .leftNav>div>ul #navtitle1 {
+            background-color: rgb(0, 112, 82);
+        }
+
+        .leftNav>div>ul #navtitle1 a {
+            color: white;
+        }
+
+        #info {
+            margin-left: 10px;
+            border: 1px solid rgb(170, 170, 170);
+            width: 330px;
+            height: 300px;
+            float: left;
+            padding: 20px;
+        }
+
+        #moneydiv {
+            margin-left: 10px;
+            border: 1px solid rgb(170, 170, 170);
+            width: 330px;
+            height: 300px;
+            float: right;
+            padding: 20px;
+        }
+
+        #moneydivTable td {
+            border: none;
+        }
+
+        #getMoneytr {
+            text-align: center;
+        }
+
+        #getMoneyBTN {
+            height: 50px;
+            width: 120px;
+            background-color: rgb(0, 112, 82);
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        #howmuchdiv {
+            text-align: right;
+            font-size: 40px;
+        }
+
+        .content td {
+            border-bottom: 1px solid rgb(170, 170, 170);
+            padding: 10px;
+        }
+
+        .content table {
+            width: 300px;
+            border-top: 2px solid rgb(0, 112, 82);
+            border-collapse: collapse;
+        }
+
+        .mypageBTNS {
+            height: 40px;
+            width: 70px;
+            background-color: rgb(0, 112, 82);
+            color: white;
+            border: none;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        #mypageBTNSSS {
+            text-align: center;
+        }
+        .contents{
+            width:800px;
+            height:500px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="menubar">
+        <div class="header">
+            <div class="logo">
+                <a href=""><img src="logo.jpg" alt="" height="70px" width="134.75px"
+                        style="float: left;margin-left: 100px;"></a>
+            </div>
+            <div class="inf">
+                <a href="#" id="name">로또짱님</a>
+                <a href="#" id="money">보유금액 0원</a>
+                <a href="#" onclick="showMetheMoney()">주급받기</a>
+                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
+            </div>
+        </div>
+    </nav>
+    <div class="line1"></div>
+    <div id="dropboxdiv">
+        <ul id="dropbox">
+            <li><a href="#">로또구매하기</a>
+                <ul>
+                    <li><a href="#">자동구매</a></li>
+                    <li><a href="#">수동구매</a></li>
+                </ul>
+            </li>
+            <li><a href="#">순위</a>
+                <ul>
+                    <li><a href="#">이번주 순위</a></li>
+                    <li><a href="#">누적순위</a></li>
+                </ul>
+            </li>
+            <li><a href="#">당첨결과</a>
+                <ul>
+                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호 당첨확인</a></li>
+                    <li><a href="당첨내역.html">내 당첨내역</a></li>
+                </ul>
+            </li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
+    </div>
+    <div class="line2"></div>
+    <div class="container">
+        <section class="section">
+            <nav class="leftNav">
+                <div>
+                    <h2>마이페이지</h2>
+                    <ul>
+                        <li id="navtitle1"><a href="mypage.html"><span>마이페이지</span></a></li>
+                        <li id="navtitle2"><a href="mypage_receipt.html"><span>구입내역</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="contents">
+                    <h1>마이페이지</h1>
+                    <div id="info">
+                        <h1>개인 정보</h1>
+                        <div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>아이디 :</td>
+                                        <td colspan="2">abc123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>닉네임 :</td>
+                                        <td>abc만세</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>이메일 :</td>
+                                        <td>abc123@abc.kr</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <br>
+                        <div id="mypageBTNSSS">
+                            <input type="button" class="mypageBTNS" value="고객센터">
+                            <input type="button" class="mypageBTNS" value="FAQ">
+                            <input type="button" class="mypageBTNS" value="1:1상담">
+                            <input type="button" class="mypageBTNS" value="이용가이드">
+                        </div>
+                    </div>
+                    <div id="moneydiv">
+                        <h1>보유 금액</h1>
+                        <div>
+                        </div>
+                        <table id="moneydivTable">
+                            <tbody>
+                                <tr>
+                                    <td>*1주일에 1회만 금액 충전 가능</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td id="howmuchdiv" colspan=2>3,000,000원</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr id="getMoneytr">
+                                    <td><input type="button" value="주급 받기" id="getMoneyBTN"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div>
+            <h1>Lotto Simulator</h1>
+        </div>
+        <div>
+            <p>
+                공동 대표 : 송호준 , 신우섭<br>
+                주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                copyright &copy; All Right Reserved
+            </p>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>제작 : </th>
+                        <th>송호준</th>
+                        <td>|</td>
+                        <th>신우섭</th>
+                    </tr>
+                    <tr>
+                        <td>이메일 : </td>
+                        <td>hojunking96@gmail.com</td>
+                        <td>|</td>
+                        <td>dntjq807@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>깃허브 : </td>
+                        <td><a href="https://github.com/hojunking96">Github</a></td>
+                        <td>|</td>
+                        <td><a href="https://github.com/Wooseobee">Github</a></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </footer>
+
+</body>
+<script>
+    $('#dropboxdiv li').hover(
+        function () {
+            $('ul', this).stop().slideDown(200);
+        },
+        function () {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+</script>
+
+</html>
