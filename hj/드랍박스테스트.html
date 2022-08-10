@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="nav.css"> -->
+    <script type="text/javascript" src="showMetheMoney.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        body {
+            width:100%;
+            min-width:1024px;
+            display: grid;
+            place-items: center;
+            margin:0;
+        }
+
+        .header {
+            width:1300px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 112, 82);
+        }
+
+        .header .logo {
+            display: inline-block;
+        }
+
+        .header .inf {
+            margin-left: auto;
+            display: inline-block;
+        }
+
+        .header .inf a {
+            list-style-type: none;
+            margin: 0 3px 3px 0;
+            font-size: small;
+            display: inline-block;
+            color: white;
+            background-color: rgb(0, 112, 82);
+            line-height: 30px;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .header .inf #name,
+        #money {
+            color: black;
+            background-color: #fff;
+            font-weight: bold;
+        }
+
+        #dropboxdiv {
+            width: 1000px;
+            place-items: center
+        }
+
+        #dropbox {
+            list-style: none;
+            height: 40px;
+            padding: 5px 5px;
+            margin: 0;
+            background: white;
+        }
+
+        #dropbox li {
+            position: relative;
+            margin: 5px 5px;
+            padding: 0;
+        }
+
+        #dropbox li a {
+            width: 200px;
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 7px 5px;
+            margin: 0;
+            text-decoration: none;
+            color: rgb(0, 112, 82);
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: 0.3s linear;
+        }
+
+        #dropbox li:hover>a {
+            background: rgb(0, 112, 82);
+            color: white;
+        }
+
+        #dropbox li:hover ul li {
+            height: 35px;
+            overflow: visible;
+            padding: 0;
+        }
+
+        #dropbox li ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            text-align: center;
+            border:1px solid;
+            border-top:none;
+        }
+
+        #dropbox ul a {
+            font-weight: normal;
+            color: rgb(0, 112, 82);
+        }
+
+        #dropbox ul li:hover a {
+            font-weight: bold;
+        }
+
+        #dropbox ul li {
+            float: none;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+        }
+
+        .leftNav {
+            width: 300px;
+            float: left;
+            z-index: 1;
+        }
+
+        .leftNav>div {
+            height: 500px;
+        }
+
+        .leftNav>div>h2 {
+            text-align: center;
+        }
+
+        .leftNav>div>ul #guide {
+            background-color: rgb(0, 112, 82);
+        }
+
+        .leftNav>div>ul>li:hover {
+            background-color: rgb(0, 112, 82);
+        }
+
+        .leftNav li>a {
+            display: block;
+            width: 200px;
+            height: 50px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: large;
+            line-height: 50px;
+            border: 1px solid rgb(0, 112, 82);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .guide {
+            width: 1300px;
+        }
+
+        .guides {
+            width: 920px;
+            height: 1000px;
+            float: left;
+        }
+
+        .guides strong {
+            color: rgb(0, 112, 82);
+            font-size: X-large;
+        }
+        .line1 {
+            height: 0.5px;
+            width: 100%;
+            background-color: rgb(0, 112, 82);
+        }
+
+        .line2 {
+            height: 3px;
+            width: 100%;
+            background-color: rgb(0, 112, 82);
+        }
+        #body-wrapper {
+            width:100%;
+            min-height: 100%;
+            position: relative;
+        }
+
+        #body-content {
+            padding-bottom: 100px;
+        }
+
+        footer {
+            height: 100px; 
+            width: calc(100%); 
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            color: gray;
+            border-top: 1px solid gray;
+            display: flex;
+        }
+
+        footer a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        footer div {
+            flex: 1;
+            display: block;
+            margin:auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="menubar">
+        <div class="header">
+            <div class="logo">
+                <a href=""><img src="logo.jpg" alt="" height="70px" width="134.75px"
+                        style="float: left;margin-left: 100px;"></a>
+            </div>
+            <div class="inf">
+                <a href="#" id="name">로또짱님</a>
+                <a href="#" id="money">보유금액 0원</a>
+                <a href="#" onclick="showMetheMoney()">주급받기</a>
+                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
+            </div>
+        </div>
+    </nav>
+    <div class="line1"></div>
+    <div id="dropboxdiv">
+        <ul id="dropbox">
+            <li><a href="#">로또구매하기</a>
+                <ul>
+                    <li><a href="#">자동구매</a></li>
+                    <li><a href="#">수동구매</a></li>
+                </ul>
+            </li>
+            <li><a href="#">순위</a>
+                <ul>
+                    <li><a href="#">최근순위</a></li>
+                    <li><a href="#">누적순위</a></li>
+                </ul>
+            </li>
+            <li><a href="#">당첨번호</a>
+                <ul>
+                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
+                    <li><a href="지난번호당첨확인.html">지난번호당첨확인</a></li>
+                    <li><a href="당첨내역.html">당첨내역</a></li>
+                </ul>
+            </li>
+            <li><a href="#">공지사항</a></li>
+        </ul>
+    </div>
+    <div class="line2"></div>
+    <div class="container">
+        <section class="section">
+            <nav class="leftNav">
+                <div>
+                    <h2>고객센터</h2>
+                    <ul>
+                        <li id="inf"><a href=""><span>고객센터 안내</span></a></li>
+                        <li id="que"><a href=""><span>자주 묻는 질문</span></a></li>
+                        <li id="guide"><a href=""><span>이용 가이드</span></a></li>
+                        <li id="ask"><a href=""><span>1:1 문의</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="guide">
+                <div>
+                    <h2>이용 가이드</h2>
+                    <div class="guides">
+                        <ul>
+                            <li>
+                                <h3>소개</h3>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            매주 동행복권 로또6/45의 결과에 따라 당첨액이 결정됩니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>특징</h3>
+                                <ul>
+                                    <li>
+                                        <p><strong>복권 게임입니다.</strong></p>
+                                        <p>우리 복권은 현금이 아닌 매주 주어지는 주급으로 로또를 구매할 수 있습니다.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>자동, 수동으로 선택하여 복권을 구입할 수 있습니다.</strong></p>
+                                        <p>자동선택을 선택하거나 45개의 번호 중 6개의 번호를 임의로 부여받는 방법 중에서 원하는대로 구입할 수 있습니다.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>1등 당첨자가 없는 경우 당첨금은 다음 회차로 이월됩니다.</strong></p>
+                                        <p>1등 당첨자가 없는 경우에 해당 당첨금은 다음 회차 1등 당첨금으로 이월되며, 연속 이월은 2회로 제한됩니다.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>판매량에 따라 복권기금과 1등 당첨금액이 결정됩니다.</strong></p>
+                                        <p>로또 6/45는 한 주의 판매량에 따라 복권기금 누적액과 1등 당첨금액이 달라지게 됩니다.
+                                            판매량에는 제한이 없으며, 추첨 당일에도 판매 마감 시까지 구매할 수 있습니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>구입 안내</h3>
+                                <ul>
+                                    <li>
+                                        <p><strong>복권 게임입니다.</strong></p>
+                                        <p>우리 복권은 현금이 아닌 매주 주어지는 주급으로 로또를 구매할 수 있습니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>유의 사항</h3>
+                                <ul>
+                                    <li>
+                                        <p><strong>복권 게임입니다.</strong></p>
+                                        <p>우리 복권은 현금이 아닌 매주 주어지는 주급으로 로또를 구매할 수 있습니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id='body-wrapper'>
+        <div id="body-content">
+        </div>
+        <footer>
+            <div>
+                <h1>Lotto Simulator</h1>
+            </div>
+            <div>
+                <p>
+                    공동 대표 : 송호준 , 신우섭<br>
+                    주소 : 서울특별시 동대문구 서울시립대로 31<br>
+                    copyright &copy; All Right Reserved
+                </p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제작 : </th>
+                            <th>송호준</th>
+                            <td>|</td>
+                            <th>신우섭</th>
+                        </tr>
+                        <tr>
+                            <td>이메일 : </td>
+                            <td>hojunking96@gmail.com</td>
+                            <td>|</td>
+                            <td>dntjq807@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>깃허브 : </td>
+                            <td><a href="https://github.com/hojunking96">Github</a></td>
+                            <td>|</td>
+                            <td><a href="https://github.com/Wooseobee">Github</a></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+<script>
+    $('#dropboxdiv li').hover(
+        function () {
+            $('ul', this).stop().slideDown(200);
+        },
+        function () {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+    
+</script>
+</html>
