@@ -25,22 +25,49 @@ function checkTotalMoney(){
     var sel = document.getElementById("count");
     var cnt = sel.options[sel.selectedIndex].value;
     var money = document.getElementById("totalMoney");
+    var nums1 = document.getElementById("nums1");
+
 
     switch (cnt) {
         case '1':
             money.innerHTML = "1000원";
+            $("#nums1").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums2").find(".ball").css("background-color", "rgb(240,240,240)");
+            $("#nums3").find(".ball").css("background-color", "rgb(240,240,240)");
+            $("#nums4").find(".ball").css("background-color", "rgb(240,240,240)");
+            $("#nums5").find(".ball").css("background-color", "rgb(240,240,240)");
             break;
         case '2':
             money.innerHTML = "2000원";
+            $("#nums1").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums2").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums3").find(".ball").css("background-color", "rgb(240,240,240)");
+            $("#nums4").find(".ball").css("background-color", "rgb(240,240,240)");
+            $("#nums5").find(".ball").css("background-color", "rgb(240,240,240)");
             break;
         case '3':
             money.innerHTML = "3000원";
+            $("#nums1").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums2").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums3").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums4").find(".ball").css("background-color", "rgb(240,240,240)");
+            $("#nums5").find(".ball").css("background-color", "rgb(240,240,240)");
             break;
         case '4':
             money.innerHTML = "4000원";
+            $("#nums1").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums2").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums3").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums4").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums5").find(".ball").css("background-color", "rgb(240,240,240)");
             break;
         case '5':
             money.innerHTML = "5000원";
+            $("#nums1").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums2").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums3").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums4").find(".ball").css("background-color", "rgb(0, 112, 82)");
+            $("#nums5").find(".ball").css("background-color", "rgb(0, 112, 82)");
             break;
         default:
             break;
@@ -48,5 +75,10 @@ function checkTotalMoney(){
 }
 
 function resetAutoNums(){
-    document.getElementById("totalMoney").innerHTML = "원";
+    $("#nums1").find(".ball").css("background-color", "rgb(240,240,240)");
+    $("#nums2").find(".ball").css("background-color", "rgb(240,240,240)");
+    $("#nums3").find(".ball").css("background-color", "rgb(240,240,240)");
+    $("#nums4").find(".ball").css("background-color", "rgb(240,240,240)");
+    $("#nums5").find(".ball").css("background-color", "rgb(240,240,240)");
+    $("#totalMoney").html("원");
 }
