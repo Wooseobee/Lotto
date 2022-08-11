@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객센터</title>
+    <title>Lotto Simulator</title>
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../../css/header.css">
@@ -24,6 +24,9 @@
         }
         .question p, .answer p{
             width: 600px;
+        }
+        .question span {
+            font-size: xx-large;
         }
         .question span, .answer span {
             display: inline-block;
@@ -49,7 +52,7 @@
                 <a href="../mypage/mypage.html" id="name">로또짱님</a>
                 <a href="../mypage/mypage.html" id="money">보유금액 0원</a>
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
-                <a href="#" onclick="alert('로그아웃 되었습니다');">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick="alert('로그아웃 되었습니다'); location.href='../index/index.html'">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                 <a href="../mypage/mypage.html">마이페이지</a>
                 <a href="../callcenter/callcenter.html">고객센터</a>
             </div>
@@ -74,7 +77,7 @@
                 <ul>
                     <li><a href="../win/win_round.html">회차별 당첨번호</a></li>
                     <li><a href="../win/win_past.html">지난번호 당첨확인</a></li>
-                    <li><a href="../win/win_mylist.html">내 당첨내역</a></li>
+                    <li><a href="../win/win_mylist.html">나의 당첨내역</a></li>
                 </ul>
             </li>
             <li><a href="../notice/notice.html">공지사항</a></li>
