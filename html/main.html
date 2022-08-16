@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main</title>
+    <title>Lotto Simulator</title>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
@@ -14,8 +14,10 @@
     <script type="text/javascript" src="../js/showMetheMoney.js"></script>
     <style>
         #body-wrapper, button, input {
-            color: rgb(0, 112, 82);
             font-size: x-large;
+        }
+        h1 {
+            color: black;
         }
         #body-content {
             display: flex;
@@ -32,7 +34,7 @@
             text-align: center;
         }
         .section2 {
-            margin-top: 40px;
+            margin-top: 30px;
             height: 600px;
             width: 600px;
             flex: 1;
@@ -42,8 +44,12 @@
             display: inline-block;
             margin-right: 10px;
         }
-        .section2 th{
-            border: 1px solid black;
+        .section2 th, .section2 td{
+            border: 1px solid rgb(170, 170, 170);
+        }
+        .section2 th {
+            border-top:3px solid rgb(0, 112, 82);
+            background-color: rgb(240,240,240);
         }
         .section2 table, .notice table {
             border-collapse: collapse;
@@ -115,29 +121,26 @@
             margin: 0 3px;
         }
         .buy {
-            border-bottom: 3px solid rgb(0, 112, 82);
-            border-left: 3px solid rgb(0, 112, 82);
-            border-right: 3px solid rgb(0, 112, 82);
             border-collapse: collapse;
-        }
-
-        .buy > a {
-            border-bottom: 3px solid rgb(0, 112, 82);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .buyTable {
             text-align: center;
+            width: 100%;
+            border-collapse: collapse;
         }
         .buyTable th {
             padding: 0;
             height: 10px;
-            border-bottom: 3px solid rgb(0, 112, 82);
-            border-collapse: collapse;
+            line-height: 65px;
         }
         .buyTable td {
             padding: 0;
             height: 10px;
-            width: 700px;
+            border:  3px solid rgb(0, 112, 82);
         }
         #body-wrapper {
             height: 800px;
@@ -154,6 +157,12 @@
             background-color: white;
             border: 1px solid rgb(0, 112, 82);
             color: black;
+            cursor: pointer;
+        }
+        button:active {
+            box-shadow: 1px 1px 0 rgb(0, 112, 82);
+            position: relative;
+            top: 2px;
         }
         button:hover {
             background-color: rgb(0, 112, 82);
@@ -171,14 +180,13 @@
     <nav id="menubar">
         <div class="header">
             <div class="logo">
-                <a href="main.html"><img src="../logo.jpg" alt="" height="70px" width="134.75px"
-                        style="float: left;margin-left: 100px;"></a>
+                <a href="main.html"><img src="../logo.jpg" alt="" height="70px" width="134.75px"></a>
             </div>
             <div class="inf">
                 <a href="mypage/mypage.html" id="name">로또짱님</a>
                 <a href="mypage/mypage.html" id="money">보유금액 0원</a>
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
-                <a href="#" onclick="alert('로그아웃 되었습니다');">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick="alert('로그아웃 되었습니다'); location.href='../index/index.html'">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                 <a href="mypage/mypage.html">마이페이지</a>
                 <a href="callcenter/callcenter.html">고객센터</a>
             </div>
@@ -203,7 +211,7 @@
                 <ul>
                     <li><a href="win/win_round.html">회차별 당첨번호</a></li>
                     <li><a href="win/win_past.html">지난번호 당첨확인</a></li>
-                    <li><a href="win/win_mylist.html">내 당첨내역</a></li>
+                    <li><a href="win/win_mylist.html">나의 당첨내역</a></li>
                 </ul>
             </li>
             <li><a href="notice/notice.html">공지사항</a></li>
@@ -213,8 +221,8 @@
     <div id="body-wrapper">
         <div id="body-content">
             <section class="section1">
-                <h1>이번주 로또 번호</h1>
                 <div>
+                    <h1 style="padding: 0; margin: 0;">이번주 로또 번호</h1>
                     <h4 style="display: inline-block;">000회 <span>0000년 00월 00일</span></h4>
                     <button onclick="location.href='win/win_round.html'">+</button>
                     <div class="nums">
@@ -240,11 +248,11 @@
                     <div class="buy">
                         <table class="buyTable">
                             <thead>
-                                <th colspan="2" style="color: black">로또 구매하러가기</th>
+                                <th colspan="2" style="color: black;"><h1>로또 구매하러가기</h1></th>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="border-right: 3px solid rgb(0, 112, 82);"><a href="buy/buy_auto.html">자동구매</a></td>
+                                    <td><a href="buy/buy_auto.html">자동구매</a></td>
                                     <td><a href="buy/buy_manual.html">수동구매</a></td>
                                 </tr>
                             </tbody>

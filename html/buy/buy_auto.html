@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자동구매</title>
+    <title>Lotto Simulator</title>
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../../css/header.css">
@@ -15,7 +15,7 @@
     <style>
         .contents {
             display: flex;
-            height: 530px;
+            height: 537px;
         }
 
         .contents > div {
@@ -47,7 +47,7 @@
             border-radius: 100%;
             text-align: center;
             vertical-align: middle;
-            background-color: rgb(0, 112, 82);
+            background-color: rgb(240,240,240);
             font-weight: 500;
             width: 41px;
             height: 41px;
@@ -70,14 +70,13 @@
     <nav id="menubar">
         <div class="header">
             <div class="logo">
-                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
-                        style="float: left;margin-left: 100px;"></a>
+                <a href="../main.html"><img src="../../logo.jpg" alt="" height="70px" width="134.75px"></a>
             </div>
             <div class="inf">
                 <a href="../mypage/mypage.html" id="name">로또짱님</a>
                 <a href="../mypage/mypage.html" id="money">보유금액 0원</a>
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
-                <a href="#" onclick="alert('로그아웃 되었습니다');">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick="alert('로그아웃 되었습니다'); location.href='../index/index.html'">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                 <a href="../mypage/mypage.html">마이페이지</a>
                 <a href="../callcenter/callcenter.html">고객센터</a>
             </div>
@@ -102,7 +101,7 @@
                 <ul>
                     <li><a href="../win/win_round.html">회차별 당첨번호</a></li>
                     <li><a href="../win/win_past.html">지난번호 당첨확인</a></li>
-                    <li><a href="../win/win_mylist.html">내 당첨내역</a></li>
+                    <li><a href="../win/win_mylist.html">나의 당첨내역</a></li>
                 </ul>
             </li>
             <li><a href="../notice/notice.html">공지사항</a></li>
@@ -125,7 +124,7 @@
                 <h4 style="color: red;">*구매할 수량을 선택해주세요</h4>
                 <div class="contents" id="checked">
                     <div class="div1">
-                        <div class="nums">
+                        <div class="nums" id="nums1">
                             <p>
                                 <span class="ball">*</span>
                                 <span class="ball">*</span>
@@ -135,7 +134,7 @@
                                 <span class="ball">*</span>
                             </p>
                         </div>
-                        <div class="nums">
+                        <div class="nums" id="nums2">
                             <p>
                                 <span class="ball">*</span>
                                 <span class="ball">*</span>
@@ -145,7 +144,7 @@
                                 <span class="ball">*</span>
                             </p>
                         </div>
-                        <div class="nums">
+                        <div class="nums" id="nums3">
                             <p>
                                 <span class="ball">*</span>
                                 <span class="ball">*</span>
@@ -155,7 +154,7 @@
                                 <span class="ball">*</span>
                             </p>
                         </div>
-                        <div class="nums">
+                        <div class="nums" id="nums4">
                             <p>
                                 <span class="ball">*</span>
                                 <span class="ball">*</span>
@@ -165,7 +164,7 @@
                                 <span class="ball">*</span>
                             </p>
                         </div>
-                        <div class="nums">
+                        <div class="nums" id="nums5">
                             <p>
                                 <span class="ball">*</span>
                                 <span class="ball">*</span>
