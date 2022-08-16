@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/leftnav.css">
     <link rel="stylesheet" type="text/css" href="../../css/footer.css">
     <title>Lotto Simulator</title>
     <script type="text/javascript" src="../../js/showMetheMoney.js"></script>
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
 
     <style>
         .leftNav>div>ul #navtitle1 {
@@ -29,24 +29,26 @@
         #당첨정보테이블 {
             margin: auto;
             width: 800px;
-            height: 400px;
+            height: 300px;
             border-collapse: collapse;
         }
 
         #당첨정보테이블div th,
         #당첨정보테이블div td {
             border: 1px solid rgb(170, 170, 170);
-            text-align: center;
         }
 
         #당첨정보테이블div th {
             border-top: 3px solid rgb(0, 112, 82);
             background-color: rgb(240, 240, 240);
+            text-align: center;
         }
-
+        #당첨정보테이블div tbody tr{
+            height:30px;
+        }
         .contents {
-            height: 800px;
-            width:800px;
+            height: 700px;
+            width: 800px;
         }
 
         .nums {
@@ -108,6 +110,15 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .td_right{
+            text-align:right;
+        }
+        .td_center{
+            text-align:center;
+        }
+        td span{
+            font-weight:bold;
+        }
     </style>
 
 </head>
@@ -116,42 +127,41 @@
     <nav id="menubar">
         <div class="header">
             <div class="logo">
-                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
-                        style="float: left;margin-left: 100px;"></a>
+                <a href="../main.html"><img src="../../logo.jpg" alt="" height="70px" width="134.75px"></a>
             </div>
             <div class="inf">
-                <a href="#" id="name">로또짱님</a>
-                <a href="#" id="money">보유금액 0원</a>
+                <a href="../mypage/mypage.html" id="name">로또짱님</a>
+                <a href="../mypage/mypage.html" id="money">보유금액 0원</a>
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
-                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                <a href="#">마이페이지</a>
-                <a href="#">고객센터</a>
+                <a href="#" onclick="alert('로그아웃 되었습니다'); location.href='../index/index.html'">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="../mypage/mypage.html">마이페이지</a>
+                <a href="../callcenter/callcenter.html">고객센터</a>
             </div>
         </div>
     </nav>
     <div class="line1"></div>
     <div id="dropboxdiv">
         <ul id="dropbox">
-            <li><a href="#">로또구매하기</a>
+            <li><a href="../buy/buy_auto.html">로또구매하기</a>
                 <ul>
-                    <li><a href="#">자동구매</a></li>
-                    <li><a href="#">수동구매</a></li>
+                    <li><a href="../buy/buy_auto.html">자동구매</a></li>
+                    <li><a href="../buy/buy_manual.html">수동구매</a></li>
                 </ul>
             </li>
-            <li><a href="#">순위</a>
+            <li><a href="../rank/rank_recent.html">순위</a>
                 <ul>
-                    <li><a href="#">이번주 순위</a></li>
-                    <li><a href="#">누적순위</a></li>
+                    <li><a href="../rank/rank_recent.html">이번주 순위</a></li>
+                    <li><a href="../rank/rank_sum.html">누적순위</a></li>
                 </ul>
             </li>
-            <li><a href="#">당첨결과</a>
+            <li><a href="win_round.html">당첨결과</a>
                 <ul>
-                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
-                    <li><a href="지난번호당첨확인.html">지난번호 당첨확인</a></li>
-                    <li><a href="당첨내역.html">나의 당첨내역</a></li>
+                    <li><a href="win_round.html">회차별 당첨번호</a></li>
+                    <li><a href="win_past.html">지난번호 당첨확인</a></li>
+                    <li><a href="win_mylist.html">나의 당첨내역</a></li>
                 </ul>
             </li>
-            <li><a href="#">공지사항</a></li>
+            <li><a href="../notice/notice.html">공지사항</a></li>
         </ul>
     </div>
     <div class="line2"></div>
@@ -170,16 +180,16 @@
             <div class="content">
                 <h2>회차별 당첨번호</h2>
                 <div class="contents">
-                        <form>
-                            <span>회차 선택&nbsp;&nbsp;:&nbsp;&nbsp;</span>
-                            <select id="selectRound">
-                                <option>1004</option>
-                                <option>1003</option>
-                                <option>1002</option>
-                                <option>1001</option>
-                            </select>
-                            <input id="selectBTN" type="button" value="조회">
-                        </form>
+                    <form>
+                        <span>회차 선택&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                        <select id="selectRound">
+                            <option>1004</option>
+                            <option>1003</option>
+                            <option>1002</option>
+                            <option>1001</option>
+                        </select>
+                        <input id="selectBTN" type="button" value="조회">
+                    </form>
                     <br>
                     <br>
                     <div id="테이블div">
@@ -208,64 +218,62 @@
                     <br>
                     <div id="당첨정보테이블div">
                         <table id="당첨정보테이블">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="25%">
+                                <col width="20%">
+                                <col width="25%">
+                                <col width="25%">
+                            </colgroup>
                             <thead>
                                 <tr>
-                                    <th>
-                                        순위
-                                    </th>
-                                    <th>
-                                        당첨금액
-                                    </th>
-                                    <th>
-                                        당첨게임 수
-                                    </th>
-                                    <th>
-                                        1게임당 당첨금액
-                                    </th>
-                                    <th>
-                                        당첨기준
-                                    </th>
+                                    <th>순위</th>
+                                    <th>당첨금액</th>
+                                    <th>당첨게임 수</th>
+                                    <th>1게임당 당첨금액</th>
+                                    <th>당첨기준</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1등</td>
-                                    <td>24,605,043,380원</td>
-                                    <td>1023213</td>
-                                    <td>2,460,504,338원</td>
-                                    <td>당첨번호 6개 숫자일치</td>
+                                    <td class="td_center">1등</td>
+                                    <td class="td_right">24,605,043,380원&nbsp;</td>
+                                    <td class="td_center">1023213</td>
+                                    <td class="td_right">2,460,504,338원&nbsp;</td>
+                                    <td class="td_center">당첨번호  <span>6개</span> 숫자일치</td>
                                 </tr>
 
                                 <tr>
-                                    <td>2등</td>
-                                    <td>100원</td>
-                                    <td>데이터연결</td>
-                                    <td>데이터연결</td>
-                                    <td>당첨번호 5개 숫자일치+보너스 숫자일치</td>
+                                    <td class="td_center">2등</td>
+                                    <td class="td_right">100원&nbsp;</td>
+                                    <td class="td_center">데이터연결</td>
+                                    <td class="td_right">데이터연결&nbsp;</td>
+                                    <td class="td_center"><div>당첨번호 <span>5개</span> 숫자일치</div><div>+<span>보너스</span> 숫자일치</div>
+                                    </td>
                                 </tr>
 
                                 <tr>
-                                    <td>3등</td>
-                                    <td>200원</td>
-                                    <td>데이터연결</td>
-                                    <td>데이터연결</td>
-                                    <td>당첨번호 5개 숫자일치</td>
+                                    <td class="td_center">3등</td>
+                                    <td class="td_right">200원&nbsp;</td>
+                                    <td class="td_center">데이터연결</td>
+                                    <td class="td_right">데이터연결&nbsp;</td>
+                                    <td class="td_center">당첨번호 <span>5개</span> 숫자일치</td>
                                 </tr>
 
                                 <tr>
-                                    <td>4등</td>
-                                    <td>100원</td>
-                                    <td>데이터연결</td>
-                                    <td>데이터연결</td>
-                                    <td>당첨번호 4개 숫자일치</td>
+                                    <td class="td_center">4등</td>
+                                    <td class="td_right">100원&nbsp;</td>
+                                    <td class="td_center">데이터연결</td>
+                                    <td class="td_right">데이터연결&nbsp;</td>
+                                    <td class="td_center">당첨번호 <span>4개</span> 숫자일치</td>
                                 </tr>
 
                                 <tr>
-                                    <td>5등</td>
-                                    <td>100원</td>
-                                    <td>데이터연결</td>
-                                    <td>데이터연결</td>
-                                    <td>당첨번호 3개 숫자일치</td>
+                                    <td class="td_center">5등</td>
+                                    <td class="td_right">100원&nbsp;</td>
+                                    <td class="td_center">데이터연결</td>
+                                    <td class="td_right">데이터연결&nbsp;</td>
+                                    <td class="td_center">당첨번호 <span>3개</span> 숫자일치</td>
                                 </tr>
                             </tbody>
                         </table>

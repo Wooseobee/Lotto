@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lotto Simulator</title>
+    <style>
+        div {
+            text-align: center;
+        }
+        h1 {
+            color: rgb(0, 112, 82);
+        }
+        h3 {
+            font-weight: normal;
+        }
+        #findmainDiv input {
+            height: 30px;
+            margin: 0 auto;
+        }
+        .findBTN {
+            cursor: pointer;
+        }
+        table {
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            border-collapse: collapse;
+            
+        }
+        th,
+        td {
+            border: 1px solid rgb(170, 170, 170);
+            text-align: center;
+            font-size:large;
+        }
+        th {
+            border-top: 3px solid rgb(0, 112, 82);
+            background-color: rgb(240, 240, 240);
+        }
+        .th{
+            height:60px;
+            text-align:center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>구입 번호 확인하기</h1>
+        <br>
+        <div id="findmainDiv">
+            <table>
+                <colgroup>
+                    <col width = "40%">
+                    <col width = "10%">
+                    <col width = "10%">
+                    <col width = "10%">
+                    <col width = "10%">
+                    <col width = "10%">
+                    <col width = "10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><div class="th">당첨번호</div></th>
+                        <th colspan="6"><div class="th">발표 전입니다</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>구입 번호 1 </td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>구입 번호 2 </td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>구입 번호 3 </td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>구입 번호 4 </td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>구입 번호 5 </td>
+                        <td colspan="6">구매 내역이 없습니다</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <input type="button" class="findBTN" value="닫 기" onclick="self.close();" />
+        </div>
+    </div>
+</body>
+
+</html>

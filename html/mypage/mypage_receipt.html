@@ -11,7 +11,10 @@
     <title>Lotto Simulator</title>
 
     <script type="text/javascript" src="../../js/showMetheMoney.js"></script>
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script language="javascript">
+        function showPopup() { window.open("mypage_receipt_numbers.html", "아이디/비밀번호 찾기", "width=500, height=500, left=400, top=100"); }
+    </script>
 
     <style>
         .leftNav>div>ul #navtitle2 {
@@ -22,14 +25,13 @@
         }
         .contents table {
             margin: auto;
-            width: 800px;
+            width: 750px;
             height: 300px;
             border-collapse: collapse;
         }
         .contents th,
         .contents td {
             border: 1px solid rgb(170, 170, 170);
-            text-align:center;
         }
         .contents th {
             border-top: 3px solid rgb(0, 112, 82);
@@ -41,6 +43,24 @@
         .contents{
             height:500px;
         }
+        #searchbtndiv input{
+            cursor:pointer;
+        }
+        .numBTNS{    
+            background-color: rgb(0, 112, 82);
+            color: white;
+            border: none;
+            height: 30px;
+            font-size: 15px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        #receiptTableDiv{
+            text-align:center;
+        }
+        .td_right{
+            text-align:right;
+        }
     </style>
 
 </head>
@@ -49,42 +69,41 @@
     <nav id="menubar">
         <div class="header">
             <div class="logo">
-                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
-                        style="float: left;margin-left: 100px;"></a>
+                <a href="../main.html"><img src="../../logo.jpg" alt="" height="70px" width="134.75px"></a>
             </div>
             <div class="inf">
-                <a href="#" id="name">로또짱님</a>
-                <a href="#" id="money">보유금액 0원</a>
+                <a href="mypage.html" id="name">로또짱님</a>
+                <a href="mypage.html" id="money">보유금액 0원</a>
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
-                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                <a href="#">마이페이지</a>
-                <a href="#">고객센터</a>
+                <a href="#" onclick="alert('로그아웃 되었습니다'); location.href='../index/index.html'">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="mypage.html">마이페이지</a>
+                <a href="../callcenter/callcenter.html">고객센터</a>
             </div>
         </div>
     </nav>
     <div class="line1"></div>
     <div id="dropboxdiv">
         <ul id="dropbox">
-            <li><a href="#">로또구매하기</a>
+            <li><a href="../buy/buy_auto.html">로또구매하기</a>
                 <ul>
-                    <li><a href="#">자동구매</a></li>
-                    <li><a href="#">수동구매</a></li>
+                    <li><a href="../buy/buy_auto.html">자동구매</a></li>
+                    <li><a href="../buy/buy_manual.html">수동구매</a></li>
                 </ul>
             </li>
-            <li><a href="#">순위</a>
+            <li><a href="../rank/rank_recent.html">순위</a>
                 <ul>
-                    <li><a href="#">이번주 순위</a></li>
-                    <li><a href="#">누적순위</a></li>
+                    <li><a href="../rank/rank_recent.html">이번주 순위</a></li>
+                    <li><a href="../rank/rank_sum.html">누적순위</a></li>
                 </ul>
             </li>
-            <li><a href="#">당첨결과</a>
+            <li><a href="../win/win_round.html">당첨결과</a>
                 <ul>
-                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
-                    <li><a href="지난번호당첨확인.html">지난번호 당첨확인</a></li>
-                    <li><a href="당첨내역.html">내 당첨내역</a></li>
+                    <li><a href="../win/win_round.html">회차별 당첨번호</a></li>
+                    <li><a href="../win/win_past.html">지난번호 당첨확인</a></li>
+                    <li><a href="../win/win_mylist.html">나의 당첨내역</a></li>
                 </ul>
             </li>
-            <li><a href="#">공지사항</a></li>
+            <li><a href="../notice/notice.html">공지사항</a></li>
         </ul>
     </div>
     <div class="line2"></div>
@@ -109,61 +128,59 @@
                         <input type="button" value="1개월">
                     </div>
                     <br>
-                    <div>
+                    <div id="receiptTableDiv">
                         <table>
+                            <colgroup>
+                                <col width = "20%">
+                                <col width = "10%">
+                                <col width = "20%">
+                                <col width = "20%">
+                                <col width = "15%">
+                            </colgroup>
                             <thead>
                                 <tr>
-                                    <th>구입일자</th>
+                                    <th>구입 일자</th>
                                     <th>회차</th>
-                                    <th>구입매수(원)</th>
-                                    <th>당첨금액</th>
+                                    <th>구입 매수(원)</th>
+                                    <th>당첨 금액</th>
+                                    <th>번호 확인</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>2022-07-25</td>
                                     <td>383</td>
-                                    <td>5 (5,000원)</td>
-                                    <td>0 원</td>
+                                    <td class="td_right">5 (5,000원)&nbsp;</td>
+                                    <td class="td_right">3,000,000,000 원&nbsp;</td>
+                                    <td><input type="button" class="numBTNS" value="번호 확인" onclick="showPopup();"></td>
                                 </tr>
                                 <tr>
                                     <td>2022-07-25</td>
-                                    <td>383
-                                    </td>
-                                    <td>5 (5,000원)
-                                    </td>
-                                    <td>0 원
-                                    </td>
+                                    <td>383</td>
+                                    <td class="td_right">5 (5,000원)&nbsp;</td>
+                                    <td class="td_right">0 원&nbsp;</td>
+                                    <td><input type="button" class="numBTNS" value="번호 확인" onclick="showPopup();"></td>
                                 </tr>
                                 <tr>
-                                    <td>2022-07-25
-                                    </td>
-                                    <td>383
-                                    </td>
-                                    <td>5 (5,000원)
-                                    </td>
-                                    <td>0 원
-                                    </td>
+                                    <td>2022-07-25</td>
+                                    <td>383</td>
+                                    <td class="td_right">5 (5,000원)&nbsp;</td>
+                                    <td class="td_right">0 원&nbsp;</td>
+                                    <td><input type="button" class="numBTNS" value="번호 확인" onclick="showPopup();"></td>
                                 </tr>
                                 <tr>
-                                    <td>2022-07-25
-                                    </td>
-                                    <td>383
-                                    </td>
-                                    <td>5 (5,000원)
-                                    </td>
-                                    <td>0 원
-                                    </td>
+                                    <td>2022-07-25</td>
+                                    <td>383</td>
+                                    <td class="td_right">5 (5,000원)&nbsp;</td>
+                                    <td class="td_right">0 원&nbsp;</td>
+                                    <td><input type="button" class="numBTNS" value="번호 확인" onclick="showPopup();"></td>
                                 </tr>
                                 <tr>
-                                    <td>2022-07-25
-                                    </td>
-                                    <td>383
-                                    </td>
-                                    <td>5 (5,000원)
-                                    </td>
-                                    <td>0 원
-                                    </td>
+                                    <td>2022-07-25</td>
+                                    <td>383</td>
+                                    <td class="td_right">5 (5,000원)&nbsp;</td>
+                                    <td class="td_right">0 원&nbsp;</td>
+                                    <td><input type="button" class="numBTNS" value="번호 확인" onclick="showPopup();"></td>
                                 </tr>
                             </tbody>
 
