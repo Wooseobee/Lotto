@@ -7,26 +7,27 @@
 
     <title>Lotto Simulator</title>
     <style>
-
         div {
             text-align: center;
         }
+
         h1 {
             color: rgb(0, 112, 82);
         }
+
         h3 {
             font-weight: normal;
         }
-        #findmainDiv input {
-            height: 30px;
-            margin: 0 auto;
+        #findmainDiv input{
+            height:30px;
+            margin:0 auto;
         }
-        .findText {
-            font-size: 20px;
-            width: 300px;
+        .findText{
+            font-size:20px;
+            width:300px;
         }
-        .findBTN {
-            cursor: pointer;
+        .findBTN{
+            cursor:pointer;
         }
     </style>
 </head>
@@ -37,8 +38,7 @@
         <h3>*등록된 이메일로 아이디/비밀번호를 전송합니다</h3>
         <br>
         <div id="findmainDiv">
-            <input type="text" class="findText" placeholder="이메일 입력" onfocus="this.placeholder=''"
-                onblur="this.placeholder='이메일 입력'">
+            <input type="text" class="findText" placeholder="이메일 입력" onfocus="this.placeholder=''" onblur="this.placeholder='이메일 입력'">
             &nbsp;&nbsp;
             <input type="button" class="findBTN" value="전 송" onclick="alert('이메일이 전송되었습니다 or 등록된 이메일이 아닙니다');" />
             <input type="button" class="findBTN" value="닫 기" onclick="self.close();" />
