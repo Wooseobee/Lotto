@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/footer.css">
     <title>Lotto Simulator</title>
     <script type="text/javascript" src="../../js/showMetheMoney.js"></script>
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
 
     <style>
         .leftNav>div>ul #navtitle1 {
@@ -69,7 +69,7 @@
         }
 
         .content table {
-            width: 300px;
+            width:100%;
             border-top: 2px solid rgb(0, 112, 82);
             border-collapse: collapse;
         }
@@ -101,42 +101,41 @@
     <nav id="menubar">
         <div class="header">
             <div class="logo">
-                <a href=""><img src="../../logo.jpg" alt="" height="70px" width="134.75px"
-                        style="float: left;margin-left: 100px;"></a>
+                <a href="../main.html"><img src="../../logo.jpg" alt="" height="70px" width="134.75px"></a>
             </div>
             <div class="inf">
-                <a href="#" id="name">로또짱님</a>
-                <a href="#" id="money">보유금액 0원</a>
+                <a href="mypage.html" id="name">로또짱님</a>
+                <a href="mypage.html" id="money">보유금액 0원</a>
                 <a href="#" onclick="showMetheMoney()">주급받기</a>
-                <a href="#">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                <a href="#">마이페이지</a>
-                <a href="#">고객센터</a>
+                <a href="#" onclick="alert('로그아웃 되었습니다'); location.href='../index/index.html'">로그아웃</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="mypage.html">마이페이지</a>
+                <a href="../callcenter/callcenter.html">고객센터</a>
             </div>
         </div>
     </nav>
     <div class="line1"></div>
     <div id="dropboxdiv">
         <ul id="dropbox">
-            <li><a href="#">로또구매하기</a>
+            <li><a href="../buy/buy_auto.html">로또구매하기</a>
                 <ul>
-                    <li><a href="#">자동구매</a></li>
-                    <li><a href="#">수동구매</a></li>
+                    <li><a href="../buy/buy_auto.html">자동구매</a></li>
+                    <li><a href="../buy/buy_manual.html">수동구매</a></li>
                 </ul>
             </li>
-            <li><a href="#">순위</a>
+            <li><a href="../rank/rank_recent.html">순위</a>
                 <ul>
-                    <li><a href="#">이번주 순위</a></li>
-                    <li><a href="#">누적순위</a></li>
+                    <li><a href="../rank/rank_recent.html">이번주 순위</a></li>
+                    <li><a href="../rank/rank_sum.html">누적순위</a></li>
                 </ul>
             </li>
-            <li><a href="#">당첨결과</a>
+            <li><a href="../win/win_round.html">당첨결과</a>
                 <ul>
-                    <li><a href="회차별당첨번호.html">회차별 당첨번호</a></li>
-                    <li><a href="지난번호당첨확인.html">지난번호 당첨확인</a></li>
-                    <li><a href="당첨내역.html">내 당첨내역</a></li>
+                    <li><a href="../win/win_round.html">회차별 당첨번호</a></li>
+                    <li><a href="../win/win_past.html">지난번호 당첨확인</a></li>
+                    <li><a href="../win/win_mylist.html">나의 당첨내역</a></li>
                 </ul>
             </li>
-            <li><a href="#">공지사항</a></li>
+            <li><a href="../notice/notice.html">공지사항</a></li>
         </ul>
     </div>
     <div class="line2"></div>
@@ -158,15 +157,18 @@
                         <h1>개인 정보</h1>
                         <div>
                             <table>
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="70%">
+                                </colgroup>
                                 <tbody>
                                     <tr>
                                         <td>아이디 :</td>
-                                        <td colspan="2">abc123</td>
+                                        <td>abc123</td>
                                     </tr>
                                     <tr>
                                         <td>닉네임 :</td>
                                         <td>abc만세</td>
-
                                     </tr>
                                     <tr>
                                         <td>이메일 :</td>
@@ -178,10 +180,10 @@
                         </div>
                         <br>
                         <div id="mypageBTNSSS">
-                            <input type="button" class="mypageBTNS" value="고객센터">
-                            <input type="button" class="mypageBTNS" value="FAQ">
-                            <input type="button" class="mypageBTNS" value="1:1상담">
-                            <input type="button" class="mypageBTNS" value="이용가이드">
+                            <input type="button" class="mypageBTNS" value="고객센터" onclick="location.href='../callcenter/callcenter.html'">
+                            <input type="button" class="mypageBTNS" value="FAQ" onclick="location.href='../callcenter/callcenter_FAQ.html'">
+                            <input type="button" class="mypageBTNS" value="1:1상담" onclick="location.href='../callcenter/callcenter_askList.html'">
+                            <input type="button" class="mypageBTNS" value="이용가이드" onclick="location.href='../callcenter/callcenter_guide.html'">
                         </div>
                     </div>
                     <div id="moneydiv">
