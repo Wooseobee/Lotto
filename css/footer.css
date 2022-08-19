@@ -1,12 +1,13 @@
 footer {
     height: 100px; 
     width:100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     text-align: center;
     color: gray;
     border-top: 1px solid gray;
     display: flex;
+    transform: translatY(-100%);
 }
 
 footer a {
